@@ -34,9 +34,9 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/muaz-khan/RTCMultiConnection/issues",
+    "url": "https://github.com/muaz-khan/RTCMultiConnection/issues"
   },
   "homepage": "https://kodemint.in",
   "tonicExampleFilename": "npm-test.js",
-  "_from": "rtcmulticonnection@",
+  "_from": "rtcmulticonnection@"
 }
