@@ -20,33 +20,6 @@
     "node": ">=8.0.0"
   },
   "main": "./dist/RTCMultiConnection.js",
-  "keywords": [
-    "peer-to-peer",
-    "peer2peer",
-    "p2p",
-    "peer",
-    "webrtc",
-    "rtcmulticonnection",
-    "webrtc-library",
-    "library",
-    "javascript",
-    "chrome",
-    "firefox",
-    "opera",
-    "ie",
-    "edge",
-    "ios",
-    "safari",
-    "internet-explorer",
-    "android",
-    "rtcweb",
-    "rtcmulticonnection.js",
-    "multirtc",
-    "webrtc-experiment",
-    "javascript-library",
-    "muaz",
-    "muaz-khan"
-  ],
   "dependencies": {
     "canvas-designer": "latest",
     "detectrtc": "latest",
@@ -65,20 +38,7 @@
     "url": "https://github.com/muaz-khan/RTCMultiConnection/issues",
     "email": "muazkh@gmail.com"
   },
-  "homepage": "https://rtcmulticonnection.herokuapp.com/demos/",
+  "homepage": "https://kodemint.in",
   "tonicExampleFilename": "npm-test.js",
   "_from": "rtcmulticonnection@",
-  "devDependencies": {
-    "grunt": "0.4.5",
-    "grunt-bump": "0.7.0",
-    "grunt-cli": "0.1.13",
-    "grunt-contrib-clean": "0.6.0",
-    "grunt-contrib-concat": "0.5.1",
-    "grunt-contrib-copy": "0.8.2",
-    "grunt-contrib-uglify": "0.11.0",
-    "grunt-contrib-watch": "1.1.0",
-    "grunt-jsbeautifier": "0.2.10",
-    "grunt-replace": "0.11.0",
-    "load-grunt-tasks": "3.4.0"
-  }
 }
