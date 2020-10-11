@@ -127,7 +127,7 @@ function serverHandler(request, response) {
             stats = fs.lstatSync(filename);
 
             if (filename.search(/demo/g) === -1 && filename.search(/admin/g) === -1 && stats.isDirectory() && config.homePage === '/demo/index.html') {
-                
+
                 response.writeHead(301, {
                     'Location': '/demo/'
                 });
@@ -156,25 +156,27 @@ function serverHandler(request, response) {
                     'Content-Type': 'text/html'
                 });
 
-                if (filename.indexOf(resolveURL('/demos/MultiRTC/')) !== -1) {
-                    filename = filename.replace(resolveURL('/demos/MultiRTC/'), '');
-                    filename += resolveURL('/demos/MultiRTC/index.html');
-                } else if (filename.indexOf(resolveURL('/admin/')) !== -1) {
-                    filename = filename.replace(resolveURL('/admin/'), '');
-                    filename += resolveURL('/admin/index.html');
-                } else if (filename.indexOf(resolveURL('/demos/dashboard/')) !== -1) {
-                    filename = filename.replace(resolveURL('/demos/dashboard/'), '');
-                    filename += resolveURL('/demos/dashboard/index.html');
-                } else if (filename.indexOf(resolveURL('/demos/video-conference/')) !== -1) {
-                    filename = filename.replace(resolveURL('/demos/video-conference/'), '');
-                    filename += resolveURL('/demos/video-conference/index.html');
-                } else if (filename.indexOf(resolveURL('/demos')) !== -1) {
-                    filename = filename.replace(resolveURL('/demos/'), '');
-                    filename = filename.replace(resolveURL('/demos'), '');
-                    filename += resolveURL('/demos/index.html');
-                } else {
-                    filename += resolveURL(config.homePage);
-                }
+                filename += resolveURL(config.homePage);
+                
+                // if (filename.indexOf(resolveURL('/demos/MultiRTC/')) !== -1) {
+                //     filename = filename.replace(resolveURL('/demos/MultiRTC/'), '');
+                //     filename += resolveURL('/demos/MultiRTC/index.html');
+                // } else if (filename.indexOf(resolveURL('/admin/')) !== -1) {
+                //     filename = filename.replace(resolveURL('/admin/'), '');
+                //     filename += resolveURL('/admin/index.html');
+                // } else if (filename.indexOf(resolveURL('/demos/dashboard/')) !== -1) {
+                //     filename = filename.replace(resolveURL('/demos/dashboard/'), '');
+                //     filename += resolveURL('/demos/dashboard/index.html');
+                // } else if (filename.indexOf(resolveURL('/demos/video-conference/')) !== -1) {
+                //     filename = filename.replace(resolveURL('/demos/video-conference/'), '');
+                //     filename += resolveURL('/demos/video-conference/index.html');
+                // } else if (filename.indexOf(resolveURL('/demos')) !== -1) {
+                //     filename = filename.replace(resolveURL('/demos/'), '');
+                //     filename = filename.replace(resolveURL('/demos'), '');
+                //     filename += resolveURL('/demos/index.html');
+                // } else {
+                //     filename += resolveURL(config.homePage);
+                // }
             }
         } catch (e) {
             pushLogs(config, 'statSync.isDirectory', e);
