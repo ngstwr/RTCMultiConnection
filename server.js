@@ -126,14 +126,18 @@ function serverHandler(request, response) {
         try {
             stats = fs.lstatSync(filename);
 
-            if (filename.search(/demos/g) === -1 && filename.search(/admin/g) === -1 && stats.isDirectory() && config.homePage === '/demos/index.html') {
-                if (response.redirect) {
-                    response.redirect('/demos/');
-                } else {
-                    response.writeHead(301, {
-                        'Location': '/demos/'
-                    });
-                }
+            if (filename.search(/demo/g) === -1 && filename.search(/admin/g) === -1 && stats.isDirectory() && config.homePage === '/demo/index.html') {
+                
+                response.writeHead(301, {
+                    'Location': '/demo/'
+                });
+                // if (response.redirect) {
+                //     response.redirect('/demo/');
+                // } else {
+                //     response.writeHead(301, {
+                //         'Location': '/demo/'
+                //     });
+                // }
                 response.end();
                 return;
             }
