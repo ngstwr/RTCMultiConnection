@@ -27,7 +27,7 @@
     "multistreamsmixer": "latest",
     "recordrtc": "latest",
     "rtcmulticonnection-server": "latest",
-    "socket.io": "latest",
+    "socket.io": "2.3.0",
     "webrtc-adapter": "latest"
   },
   "analyze": false,
